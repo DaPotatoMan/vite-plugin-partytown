@@ -7,7 +7,7 @@
     "url": "https://github.com/dapotatoman"
   },
   "private": true,
-  "version": "0.0.0",
+  "version": "0.0.1",
   "type": "module",
   "scripts": {
     "build": "tsup-node src/index.ts --format esm,cjs --dts",
