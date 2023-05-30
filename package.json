@@ -1,0 +1,31 @@
+{
+  "name": "vite-plugin-partytown",
+  "author": {
+    "email": "dev.iamfahad@gmail.com",
+    "name": "Fahadul Islam",
+    "url": "https://github.com/dapotatoman"
+  },
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "build": "tsup-node src/index.ts --format esm --dts"
+  },
+  "files": ["dist"],
+  "main": "./dist/index.js",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "^0.39.3",
+    "@builder.io/partytown": "^0.8.0",
+    "@types/node": "^20.2.5",
+    "eslint": "^8.41.0",
+    "tsup": "^6.7.0",
+    "typescript": "^5.0.4",
+    "vite": "^4.3.9"
+  }
+}
