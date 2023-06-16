@@ -15,7 +15,17 @@ function buildHTML(context: PluginConfig) {
     ],
   }
 
-  const mainScript = `<script>${partytownSnippet()}</script>`
+  const mainScript = `
+    <script>
+      try {
+        ${partytownSnippet()}
+      } catch (error) {
+        console.warn('Partytown failed to load');
+        console.error(error);
+      }
+    </script>
+  `
+
   const integrationScripts = integrations?.map(
     entry => `<script type="text/partytown">${entry.content}</script>`)
     .join('\n')
