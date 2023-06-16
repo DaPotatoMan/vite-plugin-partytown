@@ -6,7 +6,7 @@
     "name": "Fahadul Islam",
     "url": "https://github.com/dapotatoman"
   },
-  "version": "0.0.1",
+  "version": "0.0.2",
   "type": "module",
   "scripts": {
     "build": "tsup-node src/index.ts --format esm,cjs --dts",
